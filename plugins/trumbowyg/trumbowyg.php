@@ -1,4 +1,13 @@
 <?php
+/**
+ * Trumbowyg plugin.
+ *
+ * It transforms all the editable areas into Trumbowyg WYSIWYG editor.
+ *
+ * @author  Yassine Addi <yassineaddi.dev@gmail.com>
+ * @version 1.0.0 beta
+ */
+
 defined('INC_ROOT') OR die('Direct access is now allowed');
 
 wCMS::addListener('js', 'loadTrumbowygJS');
