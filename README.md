@@ -3,7 +3,7 @@ Plugins development repository. All approved plugins get upladed to the https://
 
 ### List of WonderCMS approved plugins
 - Trumbowyg (WYSIWYG editor)
-- file manager
+- File uploader
 
 ### Installation
 1. Upload the chosen plugin along with its folder into your WonderCMS plugins folder.
