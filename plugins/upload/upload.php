@@ -1,4 +1,13 @@
 <?php
+/**
+ * Upload plugin.
+ *
+ * Simple file uploader that adds an upload form in the settings area.
+ *
+ * @author  Yassine Addi <yassineaddi.dev@gmail.com>
+ * @version 1.0.0
+ */
+
 defined('INC_ROOT') || die('Direct access is not allowed.');
 
 wCMS::addListener('settings', 'addHtmlUploadForm');
