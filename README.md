@@ -2,6 +2,7 @@
 Plugins development repository. All approved plugins get upladed to the https://wondercms.com/forum
 
 ### List of WonderCMS approved plugins
+- Trumbowyg (WYSIWYG editor)
 - file manager
 
 ### Installation
