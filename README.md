@@ -14,13 +14,6 @@ The plugin is then activated and will start working automatically.
   - `find ./ -type d -exec chmod 755 {} \;`
   - `find ./ -type f -exec chmod 644 {} \;`
 
-### WonderCMS website - https://wondercms.com
-### WonderCMS plugins forum - https://wondercms.com/forum/viewforum.php?f=30
-
-### WonderCMS themes repository - https://github.com/robiso/wondercms-themes
-### WonderCMS themes forum - https://wondercms.com/forum/viewforum.php?f=29
-
-
 ### WonderCMS website
 - https://wondercms.com
 
