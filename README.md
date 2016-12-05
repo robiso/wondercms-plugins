@@ -19,3 +19,19 @@ The plugin is then activated and will start working automatically.
 
 ### WonderCMS themes repository - https://github.com/robiso/wondercms-themes
 ### WonderCMS themes forum - https://wondercms.com/forum/viewforum.php?f=29
+
+
+### WonderCMS website
+- https://wondercms.com
+
+### WonderCMS community
+- https://wondercms.com/forum/
+
+### WonderCMS plugins forum
+- https://wondercms.com/forum/viewforum.php?f=30
+
+### WonderCMS themes repository
+- https://github.com/robiso/wondercms-themes
+
+### WonderCMS themes forum
+- https://wondercms.com/forum/viewforum.php?f=29
