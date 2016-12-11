@@ -2,9 +2,10 @@
 - Approved plugins get upladed to the forum at: https://wondercms.com/forum
 
 ### List of currently approved plugins
-- Trumbowyg (WYSIWYG editor) - author: Yassine Addi
-- File uploader - author: Yassine Addi
-- Simple hits counter - author: Yassine Addi
+- Trumbowyg WYSIWYG 1.0.0 - author: Yassine Addi (description: https://wondercms.com/forum/viewtopic.php?f=30&t=767)
+- File uploader 1.0.0 - author: Yassine Addi (description: https://wondercms.com/forum/viewtopic.php?f=30&t=766)
+- Hits counter 1.0.0 - author: Yassine Addi (description: https://wondercms.com/forum/viewtopic.php?f=30&t=775)
+- Backup 1.0.0 - author: Yassine Addi (description: https://wondercms.com/forum/viewtopic.php?f=30&t=776)
 
 ### Installation
 1. Download and upload your chosen plugin, along with its folder into your WonderCMS plugins folder.
