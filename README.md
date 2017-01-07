@@ -17,7 +17,7 @@
 1. Create your plugin and upload it to GitHub. Notify us via either GitHub or WonderCMS community.
 2. A pull request will be made to our plugins repository https://github.com/robiso/wondercms-plugins/tree/master/plugins
 3. All tested and approved plugins will be added as a standalone thread in the 1.x.x APPROVED subforum, along with the plugin being compressed in a ZIP format for user convenience.
-4. Chosen approved plugins will also be featured in the official WonderCMS demo.
+- Chosen plugins will also be featured in the official WonderCMS demo.
 
 ### If any errors occur, please correct file permissions to 644 and folder permissions to 755. You can do this manually or with the script below (added by Bill Carson)
   - `find ./ -type d -exec chmod 755 {} \;`
