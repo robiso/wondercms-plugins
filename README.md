@@ -1,17 +1,17 @@
 # WonderCMS plugins
 - Plugins repository for WonderCMS (https://www.wondercms.com)
 
+### Installation
+1. Unzip and upload your chosen plugin folder into your WonderCMS plugins folder.
+2. The plugin is then activated and will start working automatically.
+- You can also clone a speficic plugin to your WonderCMS plugins folder.
+
 ### Approved plugins
 - MediumEditor WYSIWYG 1.0.0 author: Yassine Addi (description and download: https://wondercms.com/forum/viewtopic.php?f=30&t=801)
 - Trumbowyg WYSIWYG 1.0.0 author: Yassine Addi (description and download: https://wondercms.com/forum/viewtopic.php?f=30&t=767)
 - File uploader 1.0.0 - author: Yassine Addi  (description and download: download: https://wondercms.com/forum/viewtopic.php?f=30&t=766)
 - Hits counter 1.0.0 - author: Yassine Addi (description and download:  https://wondercms.com/forum/viewtopic.php?f=30&t=775)
 - Backup 1.0.0 - author: Yassine Addi (description and download: https://wondercms.com/forum/viewtopic.php?f=30&t=776)
-
-### Installation
-1. Unzip and upload your chosen plugin folder into your WonderCMS plugins folder.
-2. The plugin is then activated and will start working automatically.
-- You can also clone a speficic plugin to your WonderCMS plugins folder.
 
 ### Submitting plugins
 1. Create your plugin and upload it to GitHub. Notify us via either GitHub or WonderCMS community.
@@ -28,6 +28,9 @@
 
 ### WonderCMS community
 - https://wondercms.com/forum/
+
+### WonderCMS docs
+- https://www.wondercms.com/forum/viewforum.php?f=27
 
 ### WonderCMS plugins forum
 - https://wondercms.com/forum/viewforum.php?f=30
