@@ -7,7 +7,7 @@
 
 ### Approved plugins
 - Summernote WYSIWYG 2.0.0 author: Prakai Nadee /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)
-- MediumEditor WYSIWYG 2.0.0 author: Yassine Addi /edit by Herman (download: https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip)
+- MediumEditor WYSIWYG 1.0.0 author: Yassine Addi /edit by Herman (download: https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip)
 - Hits counter 2.0.0 - author: Yassine Addi /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip)
 
 ### Submitting a plugin
