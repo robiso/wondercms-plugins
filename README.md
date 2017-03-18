@@ -1,4 +1,4 @@
-# Plugins repository for WonderCMS (https://www.wondercms.com)
+# Plugins repository for WonderCMS
 
 ### Installation
 1. Unzip and upload your chosen plugin folder into your WonderCMS plugins folder.
