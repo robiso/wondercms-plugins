@@ -6,8 +6,8 @@
 - You can also clone a speficic plugin to your WonderCMS plugins folder.
 
 ### Approved plugins
-- Summernote 2.0.0 author: Prakai Nadee /edit by robiso (download: https://wondercms.com/forum/viewtopic.php?f=30&
-- Hits counter 2.0.0 - author: Yassine Addi /edit by robiso (download:  https://wondercms.com/forum/viewtopic.php?f=30&t=775)
+- Summernote 2.0.0 author: Prakai Nadee /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)
+- Hits counter 2.0.0 - author: Yassine Addi /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip)
 
 ### Submitting a plugin
 1. Create plugin and upload it to GitHub.
