@@ -13,7 +13,7 @@
 ### How to submit a plugin
 1. Create a plugin and upload it to GitHub.
 
-2. Create a ZIP file of your plugin folder and upload it as a release on GitHub. For example
+2. Create a ZIP file of your plugin folder and upload it as a release on GitHub.
    - for example, you can check out our plugin releases https://github.com/robiso/wondercms-plugins/releases
    
 3. IMPORTANT: Make sure your ZIP file is created in a way so the user can simply unzip and upload it to their plugins folder.
