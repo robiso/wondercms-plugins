@@ -6,10 +6,11 @@
 - You can also clone a speficic plugin to your WonderCMS plugins folder.
 
 ### Approved plugins
-- Summernote WYSIWYG 2.0.0 author: Prakai Nadee /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)
-- Create new editable areas / Additional content author: Prakai Nadee /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/addition_contents.zip)
-- MediumEditor WYSIWYG 1.0.0 author: Yassine Addi /edit by Herman (download: https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip)
-- Hits counter 2.0.0 - author: Yassine Addi /edit by robiso (download: https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip)
+- Summernote WYSIWYG 2.0.0 + file uploader | author: Prakai Nadee // edit by robiso - ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)***
+- Create new editable areas 2.0.0 / Create additional contents | author: Prakai Nadee // edit by robiso -  ***[Download]( https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/addition_contents.zip)***
+- Contact form 2.0.0 | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/contact_form/releases/tag/2.0)*** -  ***[Download](https://github.com/robiso/contact_form/releases/download/2.0/contact_form.zip)***
+- MediumEditor WYSIWYG 1.0.0 | author: Yassine Addi // edit by Herman Adema -  ***[Download](https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip)***
+- Hits counter 2.0.0 | author: Yassine Addi // edit by robiso -  ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip)***
 
 ### How to submit a plugin
 1. Create a plugin and upload it to GitHub.
