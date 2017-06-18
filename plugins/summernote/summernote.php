@@ -5,54 +5,57 @@
  * It transforms all the editable areas into SummerNote inline editor.
  *
  * @author  Prakai Nadee <prakai@rmuti.acth>
- * @version 1.0.1
+ * @edited by robiso - version 2.2.0
+ * @version 1.0.1 // version by robiso - 2.2.0
  */
 
 if(defined('VERSION'))
- 	define('version', VERSION);
-    defined('version') OR die('Direct access is not allowed.');
+	define('version', VERSION);
+	defined('version') OR die('Direct access is not allowed.');
 
-$default_contents_path = 'files';
+	$default_contents_path = 'files';
 
-    wCMS::addListener('js', 'loadSummerNoteJS');
-    wCMS::addListener('css', 'loadSummerNoteCSS');
-    wCMS::addListener('editable', 'initialSummerNoteVariables');
+	wCMS::addListener('js', 'loadSummerNoteJS');
+	wCMS::addListener('css', 'loadSummerNoteCSS');
+	wCMS::addListener('editable', 'initialSummerNoteVariables');
 
 function initialSummerNoteVariables($contents) {
-    $content = $contents[0];
-    $subside = $contents[1];
+	$content = $contents[0];
+	$subside = $contents[1];
 
-    global $default_contents_path;
+	global $default_contents_path;
 
-    $contents_path = wCMS::getConfig('contents_path');
-    if ( ! $contents_path) {
-        wCMS::setConfig('contents_path', $default_contents_path);
-        $contents_path = $default_contents_path;
-    }
-    $contents_path_n = trim($contents_path, "/");
-    if ($contents_path != $contents_path_n) {
-        $contents_path = $contents_path_n;
-        wCMS::setConfig('contents_path', $contents_path);
-    }
-    $_SESSION['contents_path'] = $contents_path;
+	$contents_path = wCMS::getConfig('contents_path');
+	if ( ! $contents_path) {
+		wCMS::setConfig('contents_path', $default_contents_path);
+		$contents_path = $default_contents_path;
+	}
+	$contents_path_n = trim($contents_path, "/");
+	if ($contents_path != $contents_path_n) {
+		$contents_path = $contents_path_n;
+		wCMS::setConfig('contents_path', $contents_path);
+	}
+	$_SESSION['contents_path'] = $contents_path;
 
-    return array($content, $subside);
+	return array($content, $subside);
 }
 
 function loadSummerNoteJS($args) {
-    $script = <<<'EOT'
+	$script = <<<'EOT'
 
 <!--script src="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script-->
 <script src="plugins/summernote/summernote/summernote.js"></script>
 <script src="plugins/summernote/js/files.js"></script>
 <script>
 $(function() {
-	var s=$("span.editable").clone();
-	s.each(function(a,b){
-		var c=s[a].id,d=s[a].outerHTML.replace(/span/,"div");
-		$("span.editable#"+c).replaceWith(d);
-	});
 	var editElements = {};
+	$(document).click(function(event) { 
+		if(!$(event.target).closest('.note-editor').length) {
+			if($('.note-popover').is(":visible")) {
+				$('.note-popover').hide();
+			}
+		}   
+	})
 	$('.editable').summernote({
 		airMode: true,
 		popover: {
@@ -70,12 +73,11 @@ $(function() {
 				['color', ['color']],
 				['para', ['ul', 'ol', 'paragraph']],
 				['style', ['style']],
-				['insert', ['image', 'doc', 'link', 'video', 'hr']], // image and doc are customized button
-				['table', ['table']],
+				['insert', ['image', 'doc', 'link', 'video', 'hr']], // image and doc are customized buttons
 			],
 			styleTags: ['p', 'blockquote', 'pre', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
 		},
-		placeholder: 'Click and write here...',
+		placeholder: 'Click here to write.',
 		callbacks: {
 			onChange: function(contents, $editable) {
 				editElements[$(this).attr('id')] = contents;
@@ -84,12 +86,13 @@ $(function() {
 				if (editElements[$(this).attr('id')]!=undefined) {
 					var id = $(this).attr('id');
 					var content = editElements[$(this).attr('id')];
-                    var target = ($(this).attr('data-target')!=undefined) ? $(this).attr('data-target'):'pages';
+					var target = ($(this).attr('data-target')!=undefined) ? $(this).attr('data-target'):'pages';
 					editElements[$(this).attr('id')] = undefined;
 					$.post("",{
 						fieldname: id,
 						content: content,
-                        target: target
+						target: target,
+						token: token,
 					});
 				}
 			},
@@ -105,6 +108,7 @@ $(function() {
 					cache: false,
 					contentType: false,
 					processData: false,
+					token: token,
 					success: function(url) {
 						$editor.summernote('insertImage', url);
 					},
@@ -118,10 +122,8 @@ $(function() {
 });
 </script>
 EOT;
-    if(version<'2.0.0')
-        array_push($args[0], $script);
-    else
-        $args[0].=$script;
+
+	$args[0].=$script;
 	return $args;
 }
 
@@ -133,10 +135,8 @@ function loadSummerNoteCSS($args) {
 <link rel="stylesheet" href="plugins/summernote/css/font-awesome.min.css" type="text/css" media="screen" charset="utf-8">
 <link rel="stylesheet" href="plugins/summernote/css/style.css" type="text/css" media="screen" charset="utf-8">
 EOT;
-    if(version<'2.0.0')
-        array_push($args[0], $script);
-    else
-        $args[0].=$script;
+
+	$args[0].=$script;
 	return $args;
 }
 
@@ -146,9 +146,7 @@ function displaySummerNoteSettings ($args) {
 
 <label for="contents_path" data-toggle="tooltip" data-placement="right" title="Path of uploaded files, reference to root path of CMS, eg: files">SummerNote Contents path</label>
 <span id="contents_path" class="change editText">'.wCMS::getConfig('contents_path').'</span>';
-    if(version<'2.0.0')
-        array_push($args[0], $script);
-    else
-        $args[0].=$script;
+
+	$args[0].=$script;
 	return $args;
 }
