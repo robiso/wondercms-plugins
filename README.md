@@ -1,4 +1,4 @@
-# Plugins for WonderCMS 2.x.x+ (2.0.0 and higher versions)
+# Plugins for WonderCMS 2.0.0 and higher versions
 
 ### Installation
 1. Unzip and upload your chosen plugin folder into your WonderCMS plugins folder.
