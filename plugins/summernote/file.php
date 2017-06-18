@@ -1,12 +1,13 @@
 <?php
 // SummerNote plugin for WonderCMS, Server-side upload script
+
 ini_set('display_errors', 0);
 $contents_path = isset($_SESSION['contents_path']) ? $_SESSION['contents_path']:'files';
 $contents_path = $contents_path ? $contents_path:'files';
 
 $do = isset($_POST['do']) ? $_POST['do'] : (isset($_GET['do']) ? $_GET['do'] : '');
 
-$image_exts = array('jpg', 'jpeg', 'png', 'gif', 'bmp');
+$image_exts = array('jpg', 'jpeg', 'png', 'gif', 'bmp','svg');
 $document_ext = array('txt', 'text', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'zip', 'rar', '7z', 'pdf');
 
 if ($do=='ul') {
@@ -31,19 +32,19 @@ if ($do=='ul') {
 					if (move_uploaded_file($location, $destination)) {
 						echo "$contents_path/$type/$filename";
 					} else {
-						echo  $message = 'Ooops! Unable to move uploaded file';
+						echo  $message = 'Unable to move uploaded file';
 					}
 				} else {
-					echo  $message = 'Ooops! File extension is not permit';
+					echo  $message = 'File extension is not allowed.';
 				}
 			} else {
-				echo  $message = 'Ooops! File size is over limit';
+				echo  $message = 'File size is over limit.';
 			}
 		} else {
-			echo  $message = 'Ooops! Your upload triggered the following error:  '.$_FILES['file']['error'];
+			echo  $message = 'Your upload triggered the following error:  '.$_FILES['file']['error'];
 		}
 	} else {
-		echo  $message = 'Ooops! You are upload without file.';
+		echo  $message = 'No file selected.';
 	}
 }
 if ($do=='ls') {
