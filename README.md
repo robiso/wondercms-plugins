@@ -3,7 +3,6 @@
 ### Installation
 1. Unzip and upload your chosen plugin folder into your WonderCMS plugins folder.
 2. The plugin is then activated and will start working automatically.
-- You can also clone a speficic plugin to your WonderCMS plugins folder.
 
 ### Approved plugins
 - Summernote WYSIWYG 2.0.0 + file uploader | author: Prakai Nadee // edit by robiso - ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)***
