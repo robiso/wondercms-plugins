@@ -24,7 +24,7 @@ $(function() {
 				target: 'pages',
 				token: token,
 			});
-		}else{
+		} else{
 			var id = 'addition_content_'+$(this).attr('value');
 			$.ajaxSetup({async: false});
 			$.post("",{
