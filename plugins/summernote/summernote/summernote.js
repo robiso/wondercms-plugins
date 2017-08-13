@@ -6342,7 +6342,7 @@
         $video = $('<iframe>')
             .attr('frameborder', 0)
             .attr('src', vMatch[0] + '/embed/simple')
-            .attr('width', '600').attr('height', '600')
+            .attr('width', '640').attr('height', '360')
             .attr('class', 'vine-embed');
       } else if (vimMatch && vimMatch[3].length) {
         $video = $('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>')
@@ -6370,8 +6370,15 @@
       }
 
       $video.addClass('note-video-clip');
+      
+      //return $video[0];
+      var $embed;
+      var $embed = $('<div>').addClass('embed-responsive').addClass('embed-responsive-16by9');
 
-      return $video[0];
+      $video.addClass('embed-responsive-item');
+      $video.appendTo($embed);
+ 
+      return $embed[0];
     };
 
     this.show = function () {
