@@ -1,0 +1,67 @@
+div#containerform {
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	border: 0px none #bac5d6;
+	padding: 0px 0px 0px 0px;
+	background-color: transparent;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+div#errors {
+	width: 400px;
+	margin:0 auto;
+}
+#containerform label {
+	width: 70px;
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	line-height: 30%;
+}
+#containerform input {
+	width: 100%;
+	height: 20px;
+	padding: 3px;
+	margin: 0px 0px 3px 0px;
+	border: 1px solid #bac5d6;
+	font: 10px Verdana, sans-serif;
+	background: #fff;
+}
+#containerform input#verzenden {
+	width: 70px;
+	height: 25px;
+	padding: 3px;
+	margin: 3px 0px 0px 0px;
+	border: 1px solid #bac5d6;
+	font: 10px Verdana, sans-serif;
+	background: #f0f0f0;
+}
+#containerform input#wis {
+	position: absolute;
+	right: 15px;
+	width: 70px;
+	height: 25px;
+	padding: 3px;
+	margin: 3px 0px 0px 0px;
+	border: 1px solid #bac5d6;
+	font: 10px Verdana, sans-serif;
+	background: #f0f0f0;
+}
+#containerform textarea {
+	width: 100%;
+	height: 90px;
+	padding: 3px;
+	margin: 0px 0px 3px 0px;
+	border: 1px solid #bac5d6;
+	font: 10px Verdana, sans-serif;
+	background: #fff;
+}
+#containerform input.fout, textarea.fout {
+	margin: 0px;
+	border: 1px solid #FF0000;
+}
+
+#containerform label.fout {
+	color: #FF0000;
+}
