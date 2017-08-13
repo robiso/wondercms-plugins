@@ -7,7 +7,7 @@
 ### Approved plugins
 - Summernote WYSIWYG 2.0.0 + file uploader ( ***[used in official WonderCMS demo](https://wondercms.com/demo)*** ) | author: Prakai Nadee // edit by robiso - ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)***
 - Create new editable areas 2.0.0 / Create additional contents | author: Prakai Nadee // edit by robiso -  ***[Download]( https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/addition_contents.zip)***
-- Contact form 2.0.0 | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/contact_form/releases/tag/2.0)*** -  ***[Download](https://github.com/robiso/contact_form/releases/download/2.0/contact_form.zip)***
+- Contact form 2.0.0 | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/wondercms-plugins/releases/tag/contact-form)*** -  ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/2.0/contact_form.zip)***
 - MediumEditor WYSIWYG 1.0.0 | author: Yassine Addi // edit by Herman Adema -  ***[Download](https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip)***
 - Hits counter 2.0.0 | author: Yassine Addi // edit by robiso -  ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip)***
 
