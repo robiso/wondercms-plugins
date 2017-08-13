@@ -6342,7 +6342,7 @@
         $video = $('<iframe>')
             .attr('frameborder', 0)
             .attr('src', vMatch[0] + '/embed/simple')
-            .attr('width', '640').attr('height', '360')
+            .attr('width', '600').attr('height', '600')
             .attr('class', 'vine-embed');
       } else if (vimMatch && vimMatch[3].length) {
         $video = $('<iframe webkitallowfullscreen mozallowfullscreen allowfullscreen>')
