@@ -4,9 +4,9 @@
  *
  * It transforms all the editable areas into SummerNote inline editor.
  *
- * @author  Prakai Nadee <prakai@rmuti.acth>
- * @edited by robiso - version 2.2.0
- * @version 1.0.1 // version by robiso - 2.2.0
+ * @author Prakai Nadee <prakai@rmuti.acth>
+ * @edited by robiso
+ * @version 1.0.1
  */
 
 if(defined('VERSION'))
@@ -49,15 +49,8 @@ function loadSummerNoteJS($args) {
 <script>
 $(function() {
 	var editElements = {};
-	$(document).click(function(event) { 
-		if(!$(event.target).closest('.note-editor').length) {
-			if($('.note-popover').is(":visible")) {
-				$('.note-popover').hide();
-			}
-		}   
-	})
 	$('.editable').summernote({
-		airMode: true,
+		airMode: false,
 		popover: {
 			image: [
 				['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
