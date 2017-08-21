@@ -55,7 +55,7 @@ $(function() {
 			// [groupName, [list of button]]
 			['style', ['style']],
 			['font', ['bold', 'italic', 'underline', 'clear']],
-			['font', ['fontname', 'fontsize', 'color']],
+			['font', ['fontsize', 'color']],
 			['para', ['paragraph']],
 			['insert', ['link','image', 'doc', 'video']], // image and doc are customized buttons
 			['misc', ['codeview']],
