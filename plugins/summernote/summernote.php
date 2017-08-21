@@ -51,25 +51,15 @@ $(function() {
 	var editElements = {};
 	$('.editable').summernote({
 		airMode: false,
-		popover: {
-			image: [
-				['imagesize', ['imageSize100', 'imageSize50', 'imageSize25']],
-				['float', ['floatLeft', 'floatRight', 'floatNone']],
-				['remove', ['removeMedia']]
-			],
-			link: [
-				['link', ['linkDialogShow', 'unlink']]
-			],
-			air: [
-				['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'clear']],
-				['fontsize', ['fontsize']],
-				['color', ['color']],
-				['para', ['ul', 'ol', 'paragraph']],
-				['style', ['style']],
-				['insert', ['image', 'doc', 'link', 'video', 'hr']], // image and doc are customized buttons
-			],
-			styleTags: ['p', 'blockquote', 'pre', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-		},
+		toolbar: [
+            // [groupName, [list of button]]
+        	['style', ['style']],
+         	['font', ['bold', 'italic', 'underline', 'clear']],
+         	['font', ['fontname', 'fontsize', 'color']],
+        	['para', ['paragraph']],
+        	['insert', ['link','image', 'doc', 'video']], // image and doc are customized buttons
+        	['misc', ['codeview', 'fullscreen']],
+		],
 		placeholder: 'Click here to write.',
 		callbacks: {
 			onChange: function(contents, $editable) {
