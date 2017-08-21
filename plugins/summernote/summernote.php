@@ -52,13 +52,13 @@ $(function() {
 	$('.editable').summernote({
 		airMode: false,
 		toolbar: [
-            // [groupName, [list of button]]
-        	['style', ['style']],
-         	['font', ['bold', 'italic', 'underline', 'clear']],
-         	['font', ['fontname', 'fontsize', 'color']],
-        	['para', ['paragraph']],
-        	['insert', ['link','image', 'doc', 'video']], // image and doc are customized buttons
-        	['misc', ['codeview', 'fullscreen']],
+			// [groupName, [list of button]]
+			['style', ['style']],
+			['font', ['bold', 'italic', 'underline', 'clear']],
+			['font', ['fontname', 'fontsize', 'color']],
+			['para', ['paragraph']],
+			['insert', ['link','image', 'doc', 'video']], // image and doc are customized buttons
+			['misc', ['codeview', 'fullscreen']],
 		],
 		placeholder: 'Click here to write.',
 		callbacks: {
