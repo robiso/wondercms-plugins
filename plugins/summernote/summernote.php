@@ -58,7 +58,7 @@ $(function() {
 			['font', ['fontname', 'fontsize', 'color']],
 			['para', ['paragraph']],
 			['insert', ['link','image', 'doc', 'video']], // image and doc are customized buttons
-			['misc', ['codeview', 'fullscreen']],
+			['misc', ['codeview']],
 		],
 		placeholder: 'Click here to write.',
 		callbacks: {
