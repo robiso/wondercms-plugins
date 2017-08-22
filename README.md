@@ -1,15 +1,22 @@
 ## Plugins for WonderCMS 2.0.0 and higher versions
 
-### Installation
-1. Unzip and upload your chosen plugin folder into your WonderCMS plugins folder.
-2. The plugin is then activated and will start working automatically.
-
 ### Approved plugins
-- Summernote WYSIWYG 2.0.0 + file uploader ( ***[used in official WonderCMS demo](https://wondercms.com/demo)*** ) | author: Prakai Nadee // edit by robiso - ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip)***
-- Create new editable areas 2.0.0 / Create additional contents | author: Prakai Nadee // edit by robiso -  ***[Download]( https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/addition_contents.zip)***
-- Contact form 2.0.0 | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/wondercms-plugins/releases/tag/contact-form)*** -  ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/2.0/contact_form.zip)***
-- MediumEditor WYSIWYG 1.0.0 | author: Yassine Addi // edit by Herman Adema -  ***[Download](https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip)***
-- Hits counter 2.0.0 | author: Yassine Addi // edit by robiso -  ***[Download](https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip)***
+#### Installation: Copy and paste ZIP link/URL to your 'Settings->Themes & plugins'
+
+- ***Summernote WYSIWYG EDITOR*** ( [used in official WonderCMS demo](https://wondercms.com/demo) ) | author: Prakai Nadee // edit by robiso
+  - https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip
+
+- Create new editable areas | author: Prakai Nadee // edit by robiso
+  - https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/addition_contents.zip
+  
+- Contact form | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/wondercms-plugins/releases/tag/contact-form)***
+  - https://github.com/robiso/wondercms-plugins/releases/download/2.0/contact_form.zip
+  
+- MediumEditor WYSIWYG 1.0.0 | author: Yassine Addi // edit by Herman Adema
+  - https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip
+  
+- Hits counter 2.0.0 | author: Yassine Addi // edit by robiso
+  - https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip
 
 ### How to submit a plugin
 1. Create a plugin and upload it to GitHub.
