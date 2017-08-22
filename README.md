@@ -3,28 +3,33 @@
 ### Approved plugins
 #### Installation: Copy and paste ZIP link/URL to your 'Settings->Themes & plugins'
 
-- ***Summernote WYSIWYG EDITOR*** ( [used in official WonderCMS demo](https://wondercms.com/demo) ) | author: Prakai Nadee // edit by robiso
+***Summernote WYSIWYG EDITOR*** (used in official WonderCMS demo) | author: Prakai Nadee // edit by robiso
   - https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip
 
-- Create new editable areas | author: Prakai Nadee // edit by robiso
+
+***Create new editable areas*** | author: Prakai Nadee // edit by robiso
   - https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/addition_contents.zip
   
-- Contact form | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/wondercms-plugins/releases/tag/contact-form)***
-  - https://github.com/robiso/wondercms-plugins/releases/download/2.0/contact_form.zip
-  
-- MediumEditor WYSIWYG 1.0.0 | author: Yassine Addi // edit by Herman Adema
-  - https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip
-  
-- Hits counter 2.0.0 | author: Yassine Addi // edit by robiso
-  - https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip
 
+***Contact form*** | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/wondercms-plugins/releases/tag/contact-form)***
+  - https://github.com/robiso/wondercms-plugins/releases/download/2.0/contact_form.zip
+
+
+***MediumEditor WYSIWYG*** | author: Yassine Addi // edit by Herman Adema
+  - https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip
+
+
+***Hits counter*** | author: Yassine Addi // edit by robiso
+  - https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip
+  
+ 
 ### How to submit a plugin
 1. Create a plugin and upload it to GitHub.
 
 2. Create a ZIP file of your plugin folder and upload it as a release on GitHub.
    - for example, you can check out our plugin releases https://github.com/robiso/wondercms-plugins/releases
    
-3. IMPORTANT: Make sure your ZIP file is created in a way so the user can simply unzip and upload it to their plugins folder.
+3. IMPORTANT: Make sure your ZIP file is created in a way so the user can simply unzip and upload it to their plugins folder. Test it with your built in WonderCMS plugins installer.
 
 4. Notify us
    - via GitHub or the WonderCMS community https://www.wondercms.com/forum
