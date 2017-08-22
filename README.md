@@ -1,7 +1,7 @@
 ## Plugins for WonderCMS 2.0.0 and higher versions
 
 ### Approved plugins
-#### Installation: Copy and paste ZIP link/URL to your 'Settings->Themes & plugins'
+#### Installation: Copy link of ZIP file and paste it in your Settings->Themes & plugins, click install.
 
 ***Summernote WYSIWYG EDITOR*** (used in official WonderCMS demo) | author: Prakai Nadee // edit by robiso
   - https://github.com/robiso/wondercms-plugins/releases/download/Summernote/summernote.zip
