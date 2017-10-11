@@ -42,8 +42,8 @@
   - `find ./ -type d -exec chmod 755 {} \;`
   - `find ./ -type f -exec chmod 644 {} \;`
 
-### WonderCMS website
-- https://wondercms.com
+### WonderCMS plugins website
+- https://wondercms.com/plugins
 
 ### WonderCMS community
 - https://wondercms.com/forum/
