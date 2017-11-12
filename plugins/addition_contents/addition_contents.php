@@ -157,6 +157,6 @@ function loadAdditionContentsEditableV2($contents) {
 }
 
 function getContentV2($key, $page = false) {
-	$segments = wCMS::$currentPageExists ? wCMS::get('pages',wCMS::$currentPage) : (wCMS::get('config','login') == wCMS::$currentPage ? (object) wCMS::_loginView() : (object) wCMS::_notFoundView());
+	$segments = wCMS::$currentPageExists ? wCMS::get('pages',wCMS::$currentPage) : (wCMS::get('config','login') == wCMS::$currentPage ? (object) wCMS::loginView() : (object) wCMS::notFoundView());
 	return isset($segments->$key) ? $segments->$key : false;
 }
