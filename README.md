@@ -15,10 +15,6 @@
   - https://github.com/robiso/wondercms-plugins/releases/download/2.0/contact_form.zip
 
 
-***MediumEditor WYSIWYG*** | author: Yassine Addi // edit by Herman Adema
-  - https://github.com/Hermadme/Medium-Editor_wonderCMS_2.x.x/archive/v1.0.0.zip
-
-
 ***Hits counter*** | author: Yassine Addi // edit by robiso
   - https://github.com/robiso/wondercms-plugins/releases/download/hits-counter/hits-counter.zip
   
