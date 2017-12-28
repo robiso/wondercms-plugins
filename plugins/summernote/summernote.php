@@ -78,27 +78,6 @@ $(function() {
 						token: token,
 					});
 				}
-			},
-			onImageUpload: function(files) {
-				var $editor = $(this);
-				file = files[0];
-				data = new FormData();
-				data.append("file", file);
-				$.ajax({
-					type: "POST",
-					url: "plugins/summernote/file.php?do=ul&type=images",
-					data: data,
-					cache: false,
-					contentType: false,
-					processData: false,
-					token: token,
-					success: function(url) {
-						$editor.summernote('insertImage', url);
-					},
-					error: function(data) {
-						alert('Image upload error: '+data);
-					}
-				});
 			}
 		},
 	});
