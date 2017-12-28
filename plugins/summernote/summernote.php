@@ -5,8 +5,8 @@
  * It transforms all the editable areas into SummerNote inline editor.
  *
  * @author Prakai Nadee <prakai@rmuti.acth>
- * @edited by robiso
- * @version 1.0.1
+ * @edited by Robert Isoski @robertisoski
+ * @version 2.4 for WonderCMS
  */
 
 if(defined('VERSION'))
@@ -43,8 +43,7 @@ function initialSummerNoteVariables($contents) {
 function loadSummerNoteJS($args) {
 	$script = <<<'EOT'
 
-<!--script src="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script-->
-<script src="plugins/summernote/summernote/summernote.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.8/dist/summernote.min.js"></script>
 <script src="plugins/summernote/js/files.js"></script>
 <script>
 $(function() {
@@ -58,6 +57,7 @@ $(function() {
 			['font', ['fontsize', 'color']],
 			['para', ['paragraph']],
 			['insert', ['link','image', 'doc', 'video']], // image and doc are customized buttons
+			['table', ['table']],
 			['misc', ['codeview']],
 		],
 		placeholder: 'Click here to write.',
@@ -109,11 +109,11 @@ EOT;
 	$args[0].=$script;
 	return $args;
 }
-
+ 
 function loadSummerNoteCSS($args) {
 	$script = <<<'EOT'
 
-<!--link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" type="text/css" media="screen" charset="utf-8"-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.8/dist/summernote.css" type="text/css" media="screen" charset="utf-8">
 <link rel="stylesheet" href="plugins/summernote/summernote/summernote.css" type="text/css" media="screen" charset="utf-8">
 <link rel="stylesheet" href="plugins/summernote/css/font-awesome.min.css" type="text/css" media="screen" charset="utf-8">
 <link rel="stylesheet" href="plugins/summernote/css/style.css" type="text/css" media="screen" charset="utf-8">
