@@ -4,11 +4,11 @@
 ##### - Install instructions: copy link to ZIP file and paste it in Settings->Themes & plugins
 
 ***Summernote WYSIWYG EDITOR*** (used in official WonderCMS demo) | author: Prakai Nadee // edit by robiso
-  - https://github.com/robiso/wondercms-plugins/releases/download/Summernote/
+  - https://github.com/robiso/wondercms-plugins/releases/download/summernote-2.4/summernote.zip
 
 
 ***Create new editable areas*** | author: Prakai Nadee // edit by robiso
-  - https://github.com/robiso/wondercms-plugins/releases/download/additional-contents/
+  - https://github.com/robiso/wondercms-plugins/releases/download/additional-contents-2.4/addition_contents.zip
   
 
 ***Contact form*** | author Herman Adema // edit by robiso ***[Extra instructions](https://github.com/robiso/wondercms-plugins/releases/tag/contact-form)***
