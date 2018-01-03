@@ -5,20 +5,35 @@
  * Simple hits/visits counter. Hits are displayed in the footer once admin login,
  * hits will not be incremented if admin is logged in.
  *
- * @author  Yassine Addi <yassineaddi.dev@gmail.com>
- * @version 1.0.0
+ * @author  Yassine Addi <yassineaddi.dev@gmail.com> // edit by robiso
+ * @version 2.0.0
  */
 
-defined('INC_ROOT') || die('Direct access is not allowed.');
+if(defined('VERSION') && !defined('version'))
+	define('version', VERSION);
+if(version<'2.0.0')
+	 defined('INC_ROOT') OR die('Direct access is not allowed.');
 
-wCMS::addListener('after', 'incrementHits');
-wCMS::addListener('footer', 'displayHits');
+if(version<'2.0.0') {
+	wCMS::addListener('after', 'incrementHits');
+	wCMS::addListener('footer', 'displayHits');
+} else {
+	wCMS::addListener('menu', 'incrementHits');
+	wCMS::addListener('footer', 'displayHits');
+}
 
-function incrementHits () {
-	if (wCMS::$loggedIn) return;
+function incrementHits ($args) {
+	if (wCMS::$loggedIn) return $args;
 	$hits = file_exists(__DIR__ . '/hits.txt') ? (int) file_get_contents(__DIR__ . '/hits.txt') : 0;
-	$hits++;
+	if ( ! isset($_SESSION['_wcms_hits_counter'])) {
+		$_SESSION['_wcms_hits_counter'] = time();
+		$hits++;
+	}
+	if ((time()-$_SESSION['_wcms_hits_counter'])>600)
+		$hits++;
+	$_SESSION['_wcms_hits_counter'] = time();
 	file_put_contents(__DIR__ . '/hits.txt', $hits);
+	return $args;
 }
 
 function displayHits ($args) {
