@@ -2,25 +2,19 @@
 /**
  * Hits counter.
  *
- * Simple hits/visits counter. Hits are displayed in the footer once admin login,
- * hits will not be incremented if admin is logged in.
+ * Simple hits/visits counter. Hits are displayed in the footer once the admin is logged in.
+ * Hits will not be incremented if admin is logged in.
  *
- * @author  Yassine Addi <yassineaddi.dev@gmail.com> // edit by robiso
- * @version 2.0.0
+ * @author Yassine Addi <yassineaddi.dev@gmail.com> // edit by robiso
+ * @version 2.4 // edit by robiso
  */
 
-if(defined('VERSION') && !defined('version'))
+if (defined('VERSION') && !defined('version')) {
 	define('version', VERSION);
-if(version<'2.0.0')
-	 defined('INC_ROOT') OR die('Direct access is not allowed.');
-
-if(version<'2.0.0') {
-	wCMS::addListener('after', 'incrementHits');
-	wCMS::addListener('footer', 'displayHits');
-} else {
-	wCMS::addListener('menu', 'incrementHits');
-	wCMS::addListener('footer', 'displayHits');
 }
+
+wCMS::addListener('menu', 'incrementHits');
+wCMS::addListener('footer', 'displayHits');
 
 function incrementHits ($args) {
 	if (wCMS::$loggedIn) return $args;
