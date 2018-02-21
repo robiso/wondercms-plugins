@@ -1,7 +1,7 @@
 ## Plugins for WonderCMS 2.0.0 and higher versions
 
 ### List of approved plugins
-- (WonderCMS plugins)[https://wondercms.com/plugins]
+- [WonderCMS plugins list](https://wondercms.com/plugins)
 
 ### Installation: copy link to ZIP file and paste it in Settings->Themes & plugins
  
