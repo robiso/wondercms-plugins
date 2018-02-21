@@ -212,7 +212,7 @@ function contact_form() {
 							echo $errors;
 						}
 
-							echo "<form method='post' action='contact'>";
+							echo "<form method='post' action=''>";
 							echo "<p>";
 							echo "<input type='text' placeholder='Name' id='name' name='name' maxlength='30'";
 							if(isset($fout['input']['name'])) { echo "class='fout'"; } echo "value='";
