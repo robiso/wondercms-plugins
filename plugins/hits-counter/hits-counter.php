@@ -11,6 +11,7 @@
 
 global $Wcms;
 
+
 if (defined('VERSION') && !defined('version')) {
 	define('version', VERSION);
 }
