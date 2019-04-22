@@ -9,8 +9,6 @@
  * @version 2.4 for WonderCMS
  */
 
-global $Wcms;
-
 if(defined('VERSION')) {
     define('version', VERSION);
     defined('version') OR die('Direct access is not allowed.');
@@ -21,10 +19,7 @@ if(defined('VERSION')) {
 }
 
 function loadAdditionContentsJS($args) {
-    global $Wcms;
-
     $script = <<<'EOT'
-
 <script src="plugins/addition_contents/js/script.js" type="text/javascript"></script>
 EOT;
     if(version<'2.0.0')
@@ -35,7 +30,6 @@ EOT;
 }
 
 function loadAdditionContentsCSS($args) {
-    global $Wcms;
     $script = <<<'EOT'
 <link rel="stylesheet" href="plugins/addition_contents/css/style.css" type="text/css" media="screen" charset="utf-8">
 EOT;
@@ -48,8 +42,6 @@ EOT;
 
 function loadAdditionContentsEditableV2($contents) {
     global $Wcms;
-    // $db = $Wcms->getDb();
-    // print_r($db);
 
     if ($contents[1]!='content')
         return $contents;
