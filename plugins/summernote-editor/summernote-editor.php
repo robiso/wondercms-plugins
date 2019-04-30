@@ -11,7 +11,7 @@
 
 global $Wcms;
 
-if (defined('VERSION')) {
+if (defined('VERSION')  && !defined('version')) {
     define('version', VERSION);
     defined('version') OR die('Direct access is not allowed.');
 }
