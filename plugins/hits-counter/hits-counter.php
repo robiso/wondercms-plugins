@@ -1,6 +1,6 @@
 <?php
 /**
- * Hits counter.
+ * Hits counter plugin for WonderCMS.
  *
  * Simple hits/visits counter. Hits are displayed in the footer only to the admin.
  * Hits are  not incremented if admin is logged in.
