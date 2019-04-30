@@ -1,23 +1,19 @@
 .addition_contents {
     position: relative;
 }
-
 .addition_contents > ul.navbar-left {
     padding: 0px 0px 8px;
 }
-
 .addition_contents hr {
   border: none;
   border-top: 1px dashed #cfcfcf;
   height: 1px;
 }
-
 .addition_contents > ul > li > i.content_plus {
     padding: 0px;
     color: #339f41;
     font-size: 1.1em;
 }
-
 .addition_content {
     position: relative;
     left: 0px;
