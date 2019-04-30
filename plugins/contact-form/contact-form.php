@@ -1,11 +1,12 @@
 <?php
 /**
- * Contact form plugin.
+ * Contact form plugin for WonderCMS.
  *
- * It allows to add and manage additional contents on page.
+ * It allows to add and manage additional contents on a page.
  *
  * @author Thijs Ferket www.ferket.net
- * @forked and adapted by Herman Adema   
+ * @forked and adapted by Herman Adema  
+ * @forked by Robert Isoski @robiso
  * @forked by Jeremy Czajkowski
  * @version 3.0.0
  */
@@ -56,7 +57,7 @@ function contactfCONTENT() {
     }
 
     $formulier = TRUE;
-    $finall_content = '';
+    $final_content = '';
 
     if(isset($_POST['submitForm']) && ($_SERVER['REQUEST_METHOD'] == "POST")) {
         $aFout = array();
@@ -164,7 +165,8 @@ function contactfCONTENT() {
             else {
                 $sent = false;
             }                
-
+            header ('Location: ' . $_SERVER['REQUEST_URI']);
+            
             if ($sent) {
                echo $i18n['result_sent'];
             } else {
@@ -174,39 +176,39 @@ function contactfCONTENT() {
     }
 
     if($formulier) {
-        $finall_content .= "<div id='message'><p class='message'>" . $_SESSION['SubmitMessage'] . "</p></div>";
+        $final_content .= "<div id='message'><p class='message'>" . $_SESSION['SubmitMessage'] . "</p></div>";
         unset($_SESSION['SubmitMessage']);
 
         if($aFout) {
-            $finall_content .=  '<div id="errors">' . implode('<br>' ,$aFout) . '</div>';
+            $final_content .=  '<div id="errors">' . implode('<br>' ,$aFout) . '</div>';
         }
-        $finall_content .=  "<div id='containerform'>";
+        $final_content .=  "<div id='containerform'>";
 
-        $finall_content .=  "<form method='post' action=''>";
-        $finall_content .=  "<p>";
-        $finall_content .=  "<div class='form-group'><input type='text' placeholder='$i18n[name]' id='name' name='name' maxlength='30'";
-        if(isset($fout['input']['name'])) { $finall_content .=  "class='fout'"; } $finall_content .=  "value='";
-        if (!empty($name)) { $finall_content .=  stripslashes($name); } $finall_content .=  "' /></div>";
+        $final_content .=  "<form method='post' action=''>";
+        $final_content .=  "<p>";
+        $final_content .=  "<div class='form-group'><input type='text' placeholder='$i18n[name]' id='name' name='name' maxlength='30'";
+        if(isset($fout['input']['name'])) { $final_content .=  "class='fout'"; } $final_content .=  "value='";
+        if (!empty($name)) { $final_content .=  stripslashes($name); } $final_content .=  "' /></div>";
 
-        $finall_content .=  "<div class='form-group'><input type='text' placeholder='$i18n[email]' id='email' name='email' maxlength='255'";
-        if(isset($fout['input']['email'])) { $finall_content .=  "class='fout'"; } $finall_content .=  "value='";
-        if (!empty($email)) { $finall_content .=  stripslashes($email); } $finall_content .=  "' /></div>";
+        $final_content .=  "<div class='form-group'><input type='text' placeholder='$i18n[email]' id='email' name='email' maxlength='255'";
+        if(isset($fout['input']['email'])) { $final_content .=  "class='fout'"; } $final_content .=  "value='";
+        if (!empty($email)) { $final_content .=  stripslashes($email); } $final_content .=  "' /></div>";
 
-        $finall_content .=  "<div class='form-group'><input type='text' placeholder='$i18n[subject]' id='subject' name='subject' maxlength='40'";
-        if(isset($fout['input']['subject'])) { $finall_content .=  "class='fout'"; } $finall_content .=  "value='";
-        if (!empty($subject)) { $finall_content .=  stripslashes($subject); } $finall_content .=  "' /></div>";
+        $final_content .=  "<div class='form-group'><input type='text' placeholder='$i18n[subject]' id='subject' name='subject' maxlength='40'";
+        if(isset($fout['input']['subject'])) { $final_content .=  "class='fout'"; } $final_content .=  "value='";
+        if (!empty($subject)) { $final_content .=  stripslashes($subject); } $final_content .=  "' /></div>";
 
-        $finall_content .=  "<div class='form-group'><textarea placeholder='$i18n[message]' id='message' name='message'";
-        if(isset($fout['input']['message'])) { $finall_content .=  "class='fout'"; } $finall_content .=  " cols='31' rows='10'>";
-        if (!empty($message)) { $finall_content .=  stripslashes($message); } $finall_content .=  "</textarea></div>";
+        $final_content .=  "<div class='form-group'><textarea placeholder='$i18n[message]' id='message' name='message'";
+        if(isset($fout['input']['message'])) { $final_content .=  "class='fout'"; } $final_content .=  " cols='31' rows='10'>";
+        if (!empty($message)) { $final_content .=  stripslashes($message); } $final_content .=  "</textarea></div>";
 
-        $finall_content .=  "<input type='submit' id='submitForm' class='btn btn-primary btn-block' name='submitForm' value='$i18n[submit]' />";
-        $finall_content .=  "</p>";
-        $finall_content .=  "</form>";
-        $finall_content .=  "</div>";
+        $final_content .=  "<input type='submit' id='submitForm' class='btn btn-primary btn-block' name='submitForm' value='$i18n[submit]' />";
+        $final_content .=  "</p>";
+        $final_content .=  "</form>";
+        $final_content .=  "</div>";
     }
 
-    return $finall_content;
+    return $final_content;
 }
 
 function contact_form() {
