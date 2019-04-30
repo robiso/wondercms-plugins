@@ -1,8 +1,8 @@
 <?php
 /**
- * Additional contents plugin.
+ * Additional contents plugin for WonderCMS.
  *
- * It allows to add add manage addition contents on pages.
+ * It allows to add and manage additional contents on a page.
  *
  * @author Prakai Nadee <prakai@rmuti.acth> pre-fork: version 1.1.0
  * @forked by Robert Isoski @robiso
@@ -11,7 +11,7 @@
 
 global $Wcms;
 
-if (defined('VERSION')) {
+if (defined('VERSION')  && !defined('version')) {
     define('version', VERSION);
     defined('version') OR die('Direct access is not allowed.');
 }
