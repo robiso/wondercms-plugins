@@ -1,6 +1,6 @@
 <?php
 /**
- * SummerNote plugin for WonderCMS.
+ * SummerNote plugin.
  *
  * It transforms all the editable areas into SummerNote inline editor.
  *
