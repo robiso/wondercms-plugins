@@ -3,7 +3,7 @@
  * Hits counter plugin for WonderCMS.
  *
  * Simple hits/visits counter. Hits are displayed in the footer only to the admin.
- * Hits are  not incremented if admin is logged in.
+ * Hits are not incremented if the admin is logged in.
  *
  * @author Yassine Addi <yassineaddi.dev@gmail.com>
  * @forked by Robert Isoski @robiso
@@ -12,7 +12,7 @@
 
 global $Wcms;
 
-if (defined('VERSION')) {
+if (defined('VERSION')  && !defined('version')) {
     define('version', VERSION);
     defined('version') OR die('Direct access is not allowed.');
 }
