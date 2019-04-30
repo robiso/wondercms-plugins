@@ -4,50 +4,51 @@
  *
  * It allows add add manage addition contents on page.
  *
- * @author  Prakai Nadee <prakai@rmuti.acth> pre-fork: version 1.1.0
- * @edited by Robert Isoski @robertisoski
- * @version 2.4 for WonderCMS
+ * @author Prakai Nadee <prakai@rmuti.acth> pre-fork: version 1.1.0
+ * @forked by Robert Isoski @robiso
+ * @version 3.0.0
  */
 
-if(defined('VERSION')) {
+global $Wcms;
+
+if (defined('VERSION')) {
     define('version', VERSION);
     defined('version') OR die('Direct access is not allowed.');
-
-     $Wcms->addListener('js', 'loadAdditionContentsJS');
-     $Wcms->addListener('css', 'loadAdditionContentsCSS');
-     $Wcms->addListener('page', 'loadAdditionContentsEditableV2');
 }
 
+$Wcms->addListener('js', 'loadAdditionContentsJS');
+$Wcms->addListener('css', 'loadAdditionContentsCSS');
+$Wcms->addListener('page', 'loadAdditionContentsEditableV2');
+
 function loadAdditionContentsJS($args) {
-    $script = <<<'EOT'
-<script src="plugins/addition_contents/js/script.js" type="text/javascript"></script>
+    global $Wcms;
+    if ($Wcms->loggedIn) {
+        $script = <<<'EOT'
+        <script src="plugins/addition_contents/js/script.js" type="text/javascript"></script>
 EOT;
-    if(version<'2.0.0')
-        array_push($args[0], $script);
-    else
         $args[0].=$script;
+    }
     return $args;
 }
 
 function loadAdditionContentsCSS($args) {
-    $script = <<<'EOT'
-<link rel="stylesheet" href="plugins/addition_contents/css/style.css" type="text/css" media="screen" charset="utf-8">
+    global $Wcms;
+    if ($Wcms->loggedIn) {
+        $script = <<<'EOT'
+        <link rel="stylesheet" href="plugins/addition_contents/css/style.css" type="text/css" media="screen" charset="utf-8">
 EOT;
-    if(version<'2.0.0')
-        array_push($args[0], $script);
-    else
         $args[0].=$script;
+    }
     return $args;
 }
 
 function loadAdditionContentsEditableV2($contents) {
     global $Wcms;
 
-    if ($contents[1]!='content')
+    if ($contents[1]!='content') {
         return $contents;
-
+    }
     $content = $contents[0];
-
     $target = 'pages';
     $page = $Wcms->currentPage;
 
@@ -56,6 +57,7 @@ function loadAdditionContentsEditableV2($contents) {
             $key = $_POST['delac'];
             if (getContentV2($key)!=false) {
                 list($_, $k) = explode('content_', $key);
+                $db = $Wcms->getDb();
                 $key = 'addition_content_'.$k;
                 $Wcms->unset($target, $page, $key);
                 $key = 'addition_content_show_'.$k;
