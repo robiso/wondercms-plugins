@@ -6,7 +6,7 @@
  * Hits are  not incremented if admin is logged in.
  *
  * @author Yassine Addi <yassineaddi.dev@gmail.com>
- * Forked by Robert Isoski
+ * @forked by Robert Isoski @robiso
  * @version 3.0.0
  */
 
