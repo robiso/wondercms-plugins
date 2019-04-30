@@ -1,29 +1,26 @@
 div#containerform {
-	width: 100%;
-	margin: 0px 0px 0px 0px;
-	border: 0px none #bac5d6;
-	padding: 0px 0px 0px 0px;
-	background-color: transparent;
-	color: #000;
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    border: 0px none #bac5d6;
+    padding: 0px 0px 0px 0px;
+    background-color: transparent;
+    color: #000;
 }
-
 div#errors {
-	width: 400px;
-	margin:0 auto;
+    margin:0 auto;
 }
 div#message {
-	width: 400px;
-	margin:0 auto;
+    margin:0 auto;
 }
 #containerform label {
-	width: 70px;
-	text-align: left;
-	padding: 0px;
-	margin: 0px;
-	line-height: 30%;
+    width: 70px;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    line-height: 30%;
 }
 #containerform textarea {
-	height: 90px !important;
+    height: 90px !important;
 }
 #containerform input[type=text], #containerform textarea {
     display: block;
@@ -43,11 +40,10 @@ div#message {
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
-
 #containerform input.fout, textarea.fout {
-	margin: 0px;
-	border: 1px solid #FF0000;
+    margin: 0px;
+    border: 1px solid #FF0000 !important;
 }
 #containerform label.fout {
-	color: #FF0000;
+    color: #FF0000;
 }
