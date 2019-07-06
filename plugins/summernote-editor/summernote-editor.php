@@ -1,17 +1,17 @@
 <?php
 /**
- * Summernote editor plugin for WonderCMS.
+ * Summernote editor plugin.
  *
- * It transforms all page editable areas into an inline editor.
+ * It transforms all the editable areas into the Summernote inline editor.
  *
  * @author Prakai Nadee <prakai@rmuti.acth>
  * @forked by Robert Isoski @robertisoski
- * @version 3.0.2
+ * @version 3.0.0
  */
 
 global $Wcms;
 
-if (defined('VERSION')  && !defined('version')) {
+if (defined('VERSION')) {
     define('version', VERSION);
     defined('version') OR die('Direct access is not allowed.');
 }
