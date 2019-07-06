@@ -1,8 +1,8 @@
 <?php
 /**
- * Additional contents plugin for WonderCMS.
+ * Additional contents plugin.
  *
- * It allows to add and manage additional contents on a page.
+ * It allows to add add manage addition contents on pages.
  *
  * @author Prakai Nadee <prakai@rmuti.acth> pre-fork: version 1.1.0
  * @forked by Robert Isoski @robiso
@@ -11,14 +11,12 @@
 
 global $Wcms;
 
-if (defined('VERSION')  && !defined('version')) {
-    define('version', VERSION);
-    defined('version') OR die('Direct access is not allowed.');
+if (defined('VERSION')) {
+	$Wcms->addListener('js', 'loadAdditionContentsJS');
+	$Wcms->addListener('css', 'loadAdditionContentsCSS');
+	$Wcms->addListener('page', 'loadAdditionContentsEditableV2');
 }
 
-$Wcms->addListener('js', 'loadAdditionContentsJS');
-$Wcms->addListener('css', 'loadAdditionContentsCSS');
-$Wcms->addListener('page', 'loadAdditionContentsEditableV2');
 
 function loadAdditionContentsJS($args) {
     global $Wcms;
@@ -55,30 +53,24 @@ function loadAdditionContentsEditableV2($contents) {
     if ($Wcms->loggedIn) {
         if (isset($_POST['delac'])) {
             $key = $_POST['delac'];
-            if (getContentV2($key)!=false) {
-                list($_, $k) = explode('content_', $key);
-                $db = $Wcms->getDb();
-                $key = 'addition_content_'.$k;
-                $Wcms->unset($target, $page, $key);
-                $key = 'addition_content_show_'.$k;
-                $Wcms->unset($target, $page, $key);
-                for ($i=$k+1 ;$i!=0; $i++) {
+            if (getContentV2($key)!==false) {
+            	$tempArray = explode('content_', $key);
+                $k = (int)end($tempArray);
+                $Wcms->unset($target, $page, 'addition_content_'.$k);
+                $Wcms->unset($target, $page, 'addition_content_show_'.$k);
+
+                for ($i=$k+1 ;$i!==0; $i++) {
                     $addition_content = getContentV2('addition_content_'.$i);
-                    $addition_content_show = (getContentV2('addition_content_show_'.$i)=='hide') ? 'hide':'show';
+                    $addition_content_show = (getContentV2('addition_content_show_'.$i)==='hide') ? 'hide':'show';
                     if (empty($addition_content)) {
                         break;
                     }
-                    $key = 'addition_content_'.$i;
-                    $Wcms->unset($target, $page, $key);
-                    $key = 'addition_content_'.$k;
-                    $db->$target->$page->$key = $addition_content;
-                    $key = 'addition_content_show_'.$i;
-                    $Wcms->unset($target, $page, $key);
-                    $key = 'addition_content_show_'.$k;
-                    $db->$target->$page->$key = $addition_content_show;
+					$Wcms->unset($target, $page, 'addition_content_'.$i);
+					$Wcms->unset($target, $page, 'addition_content_show_'.$i);
+					$Wcms->set($target, $page, 'addition_content_'.$k, $addition_content);
+					$Wcms->set($target, $page, 'addition_content_show_'.$k, $addition_content_show);
                     $k++;
                 }
-                $Wcms->save($db);
             }
             die;
         }
