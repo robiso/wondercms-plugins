@@ -1,4 +1,4 @@
-## Plugins for WonderCMS 2.0.0 and higher versions
+## Plugins for WonderCMS 2.0.0 and higher versions (up to 2.7.0)
 
 ### List of approved plugins
 - [WonderCMS plugins list](https://wondercms.com/plugins)
