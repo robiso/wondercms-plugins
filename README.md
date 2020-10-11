@@ -1,4 +1,4 @@
-# This repository is deprecated - themes/plugins are now directly built into WonderCMS.
+# This repository is deprecated - themes/plugins are now directly installable through WonderCMS.
 - Please see [Custom repositories](https://github.com/robiso/wondercms/wiki/Custom-repositories)
 
 ------
